@@ -1,0 +1,28 @@
+name: deploy
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python
+  - ipython
+  - spyder-kernels=0.*
+  - jupyterlab
+  - numpy
+  - pandas
+  - matplotlib
+  - scipy
+  - imbalanced-learn
+  - scikit-learn
+  - flask
+  - flask-restful
+  - joblib
+  - pip
+  - pip:
+
+
+
+
+
+
+
+
