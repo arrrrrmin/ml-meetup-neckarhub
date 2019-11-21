@@ -1,6 +1,5 @@
-from flask import Flask
+from flask import Flask, request
 import numpy as np
-from sklearn.linear_model import LogisticRegression
 import joblib
 
 
@@ -13,7 +12,9 @@ def hello_world():
 
 @app.route('/predict')
 def predict():
-    return mdl.predict_proba(np.r_[-0.25, 0].reshape(1, -1))
+    # x = request.args.get('x')
+    # y = request.args.get('y')
+    return np.array2string(mdl.predict_proba(np.r_[-0.25, 0].reshape(1, -1)))
 
 if __name__ == '__main__':
     app.run(host= '0.0.0.0')
